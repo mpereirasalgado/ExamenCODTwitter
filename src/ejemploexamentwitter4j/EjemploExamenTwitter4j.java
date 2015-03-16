@@ -26,14 +26,8 @@ public class EjemploExamenTwitter4j {
 
         
         ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("*********************")
-                .setOAuthConsumerSecret("******************************************")
-                .setOAuthAccessToken("**************************************************")
-                .setOAuthAccessTokenSecret("******************************************");
-    
-        Twitter twitter = new TwitterFactory(cb.build()).getInstance();
-
+        TwitterFactory tf = new TwitterFactory(cb.build());
+        Twitter twitter = tf.getInstance();
         EjemploExamenTwitter4j.menu(twitter);
     }
 
